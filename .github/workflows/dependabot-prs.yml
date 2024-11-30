@@ -9,5 +9,8 @@ on:
 
 jobs:
   dependabot:
+    permissions: 
+      pull-requests: read
     uses: eamonnk418/dependabot-pr-manager-action/.github/workflows/reusable-workflow.yml@main
-    secrets: inherit
+    secrets: 
+      github-token: ${{ secrets.GITHUB_TOKEN }}
