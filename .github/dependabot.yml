@@ -5,8 +5,28 @@ updates:
     schedule:
       interval: daily
     target-branch: dependabot-updates
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: daily
+    groups:
+      security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: daily
     target-branch: dependabot-updates
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: daily
+    groups:
+      security-updates:
+        applies-to: security-updates
+        patterns:
+          - "*"
