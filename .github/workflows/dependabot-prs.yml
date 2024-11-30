@@ -1,16 +1,11 @@
 name: Dependabot PR Manager
 
-on: 
- push:
-    branches: [main]
- pull_request:
-   branches: [main]
- workflow_dispatch:
+on: pull_request
 
 jobs:
   dependabot:
+    uses: eamonnk418/dependabot-pr-manager-action/.github/workflows/reusable-workflow.yml@main
     permissions: 
       pull-requests: read
-    uses: eamonnk418/dependabot-pr-manager-action/.github/workflows/reusable-workflow.yml@main
     secrets: 
       github-token: ${{ secrets.GITHUB_TOKEN }}
