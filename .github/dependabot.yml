@@ -8,17 +8,6 @@ updates:
     pull-request-branch-name:
       separator: "-"
 
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: daily
-    pull-request-branch-name:
-      separator: "-"
-    groups:
-      security-updates:
-        applies-to: security-updates
-        patterns:
-          - "*"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
@@ -26,15 +15,3 @@ updates:
     target-branch: dependabot-updates
     pull-request-branch-name:
       separator: "-"
-
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: daily
-    pull-request-branch-name:
-      separator: "-"
-    groups:
-      security-updates:
-        applies-to: security-updates
-        patterns:
-          - "*"
