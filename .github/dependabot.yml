@@ -4,7 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-    target-branch: dependabot-updates
     pull-request-branch-name:
       separator: "-"
 
@@ -12,6 +11,5 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-    target-branch: dependabot-updates
     pull-request-branch-name:
       separator: "-"
